@@ -6,7 +6,7 @@
 	<artifactId>stream</artifactId>
 	<version>0.0.1</version>
 	<name>stream</name>
-	<description>stream turorial</description>
+	<description>java stream turorial</description>
 	<packaging>pom</packaging>
 
 	<properties>
