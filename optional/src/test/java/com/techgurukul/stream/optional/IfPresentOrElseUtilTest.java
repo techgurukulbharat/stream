@@ -19,11 +19,7 @@ class IfPresentOrElseUtilTest {
 		// with non null student reference
 		Student student = new Student(null, 123, null);
 		StudentDTO studentDTO = IfPresentUtil.toStudentDtoBeforeJava8(student);
-		assertTrue(studentDTO.getName().equals("test"));
-		assertTrue(studentDTO.getEmail().equals("test@test.com"));
 		assertTrue(studentDTO.getRollNumber().equals(student.getRollNumber()));
-		assertTrue(studentDTO.getLastName().equals("one"));
-
 	}
 
 	@Test
@@ -39,11 +35,7 @@ class IfPresentOrElseUtilTest {
 				.toStudentDtoSinceJava8(student);
 		if (studentDtoOptinal.isPresent()) { // force null check
 			StudentDTO studentDTO = studentDtoOptinal.get();
-
-			assertTrue(studentDTO.getName().equals("test"));
-			assertTrue(studentDTO.getEmail().equals("test@test.com"));
 			assertTrue(studentDTO.getRollNumber().equals(student.getRollNumber()));
-			assertTrue(studentDTO.getLastName().equals("one"));
 		}
 
 	}
